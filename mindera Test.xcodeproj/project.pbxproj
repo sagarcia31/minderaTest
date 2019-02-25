@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5CD964CC9F3A04CBA95495D5 /* Pods_mindera_TestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96A2CA132EB2F8DA67183113 /* Pods_mindera_TestUITests.framework */; };
+		7F9BECFD8D81E0F290CA5EF7 /* Pods_mindera_Test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF203A2A2A3285A6AFA04CA7 /* Pods_mindera_Test.framework */; };
 		82DCDFF122236060009D00E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DCDFF022236060009D00E9 /* AppDelegate.swift */; };
 		82DCDFF322236060009D00E9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DCDFF222236060009D00E9 /* ViewController.swift */; };
 		82DCDFF622236060009D00E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82DCDFF422236060009D00E9 /* Main.storyboard */; };
@@ -14,6 +16,14 @@
 		82DCDFFB22236062009D00E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82DCDFF922236062009D00E9 /* LaunchScreen.storyboard */; };
 		82DCE00622236063009D00E9 /* mindera_TestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DCE00522236063009D00E9 /* mindera_TestTests.swift */; };
 		82DCE01122236063009D00E9 /* mindera_TestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DCE01022236063009D00E9 /* mindera_TestUITests.swift */; };
+		82DCE03422236A1C009D00E9 /* ListPhotosInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DCE03322236A1C009D00E9 /* ListPhotosInterfaces.swift */; };
+		82DCE03522236A1C009D00E9 /* ListPhotosInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DCE03322236A1C009D00E9 /* ListPhotosInterfaces.swift */; };
+		82DCE03722236A33009D00E9 /* ListOfPhotosPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DCE03622236A33009D00E9 /* ListOfPhotosPresenter.swift */; };
+		82DCE03822236A33009D00E9 /* ListOfPhotosPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DCE03622236A33009D00E9 /* ListOfPhotosPresenter.swift */; };
+		82DCE03A22236A53009D00E9 /* ListOfPhotosInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DCE03922236A53009D00E9 /* ListOfPhotosInteractor.swift */; };
+		82DCE03B22236A53009D00E9 /* ListOfPhotosInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DCE03922236A53009D00E9 /* ListOfPhotosInteractor.swift */; };
+		82DCE03E22236F42009D00E9 /* BaseClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DCE03D22236F42009D00E9 /* BaseClient.swift */; };
+		ADF26B58F3F16BC2E75A6AF4 /* Pods_mindera_TestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21730DACFAA157D2887B1821 /* Pods_mindera_TestTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +44,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		16F6955A4E9ED673EACB3FFB /* Pods-mindera Test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mindera Test.release.xcconfig"; path = "Pods/Target Support Files/Pods-mindera Test/Pods-mindera Test.release.xcconfig"; sourceTree = "<group>"; };
+		1996A3488D2C8010B6A0406D /* Pods-mindera TestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mindera TestTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mindera TestTests/Pods-mindera TestTests.debug.xcconfig"; sourceTree = "<group>"; };
+		21730DACFAA157D2887B1821 /* Pods_mindera_TestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mindera_TestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B4F920D4205CC8B08A29736 /* Pods-mindera Test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mindera Test.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mindera Test/Pods-mindera Test.debug.xcconfig"; sourceTree = "<group>"; };
+		6D7BAD78598B39FA6A316C30 /* Pods-mindera TestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mindera TestTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-mindera TestTests/Pods-mindera TestTests.release.xcconfig"; sourceTree = "<group>"; };
+		70FA15DE115104878DCBCF62 /* Pods-mindera TestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mindera TestUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-mindera TestUITests/Pods-mindera TestUITests.release.xcconfig"; sourceTree = "<group>"; };
 		82DCDFED22236060009D00E9 /* mindera Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mindera Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		82DCDFF022236060009D00E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82DCDFF222236060009D00E9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +63,13 @@
 		82DCE00C22236063009D00E9 /* mindera TestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "mindera TestUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		82DCE01022236063009D00E9 /* mindera_TestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mindera_TestUITests.swift; sourceTree = "<group>"; };
 		82DCE01222236063009D00E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		82DCE03322236A1C009D00E9 /* ListPhotosInterfaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPhotosInterfaces.swift; sourceTree = "<group>"; };
+		82DCE03622236A33009D00E9 /* ListOfPhotosPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfPhotosPresenter.swift; sourceTree = "<group>"; };
+		82DCE03922236A53009D00E9 /* ListOfPhotosInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfPhotosInteractor.swift; sourceTree = "<group>"; };
+		82DCE03D22236F42009D00E9 /* BaseClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseClient.swift; sourceTree = "<group>"; };
+		96A2CA132EB2F8DA67183113 /* Pods_mindera_TestUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mindera_TestUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDC14699F87B3E37468FA095 /* Pods-mindera TestUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mindera TestUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mindera TestUITests/Pods-mindera TestUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		BF203A2A2A3285A6AFA04CA7 /* Pods_mindera_Test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mindera_Test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F9BECFD8D81E0F290CA5EF7 /* Pods_mindera_Test.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADF26B58F3F16BC2E75A6AF4 /* Pods_mindera_TestTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +93,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CD964CC9F3A04CBA95495D5 /* Pods_mindera_TestUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		140256BFA92ED9B258881295 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BF203A2A2A3285A6AFA04CA7 /* Pods_mindera_Test.framework */,
+				21730DACFAA157D2887B1821 /* Pods_mindera_TestTests.framework */,
+				96A2CA132EB2F8DA67183113 /* Pods_mindera_TestUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		82DCDFE422236060009D00E9 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +117,8 @@
 				82DCE00422236062009D00E9 /* mindera TestTests */,
 				82DCE00F22236063009D00E9 /* mindera TestUITests */,
 				82DCDFEE22236060009D00E9 /* Products */,
+				F5C8FE1F33F4BF2ECA420AF6 /* Pods */,
+				140256BFA92ED9B258881295 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -123,6 +161,7 @@
 		82DCE01E22236454009D00E9 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				82DCE03C22236F2D009D00E9 /* Base */,
 				82DCE02022236477009D00E9 /* Modules */,
 				82DCE01F2223646F009D00E9 /* App */,
 			);
@@ -161,6 +200,9 @@
 		82DCE022222364CB009D00E9 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				82DCE03322236A1C009D00E9 /* ListPhotosInterfaces.swift */,
+				82DCE03622236A33009D00E9 /* ListOfPhotosPresenter.swift */,
+				82DCE03922236A53009D00E9 /* ListOfPhotosInteractor.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -181,6 +223,27 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		82DCE03C22236F2D009D00E9 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				82DCE03D22236F42009D00E9 /* BaseClient.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		F5C8FE1F33F4BF2ECA420AF6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5B4F920D4205CC8B08A29736 /* Pods-mindera Test.debug.xcconfig */,
+				16F6955A4E9ED673EACB3FFB /* Pods-mindera Test.release.xcconfig */,
+				1996A3488D2C8010B6A0406D /* Pods-mindera TestTests.debug.xcconfig */,
+				6D7BAD78598B39FA6A316C30 /* Pods-mindera TestTests.release.xcconfig */,
+				BDC14699F87B3E37468FA095 /* Pods-mindera TestUITests.debug.xcconfig */,
+				70FA15DE115104878DCBCF62 /* Pods-mindera TestUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -188,9 +251,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 82DCE01522236063009D00E9 /* Build configuration list for PBXNativeTarget "mindera Test" */;
 			buildPhases = (
+				2C41BE228FE1ECE73BBD64D6 /* [CP] Check Pods Manifest.lock */,
 				82DCDFE922236060009D00E9 /* Sources */,
 				82DCDFEA22236060009D00E9 /* Frameworks */,
 				82DCDFEB22236060009D00E9 /* Resources */,
+				3397B413B341A288D739F930 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -205,6 +270,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 82DCE01822236063009D00E9 /* Build configuration list for PBXNativeTarget "mindera TestTests" */;
 			buildPhases = (
+				7A3C78DB4D69B88CA0B4B4D7 /* [CP] Check Pods Manifest.lock */,
 				82DCDFFD22236062009D00E9 /* Sources */,
 				82DCDFFE22236062009D00E9 /* Frameworks */,
 				82DCDFFF22236062009D00E9 /* Resources */,
@@ -223,6 +289,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 82DCE01B22236063009D00E9 /* Build configuration list for PBXNativeTarget "mindera TestUITests" */;
 			buildPhases = (
+				1F2FE2B6B3E4F5DC96F07DD4 /* [CP] Check Pods Manifest.lock */,
 				82DCE00822236063009D00E9 /* Sources */,
 				82DCE00922236063009D00E9 /* Frameworks */,
 				82DCE00A22236063009D00E9 /* Resources */,
@@ -307,13 +374,108 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1F2FE2B6B3E4F5DC96F07DD4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-mindera TestUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2C41BE228FE1ECE73BBD64D6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-mindera Test-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3397B413B341A288D739F930 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-mindera Test/Pods-mindera Test-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-mindera Test/Pods-mindera Test-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7A3C78DB4D69B88CA0B4B4D7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-mindera TestTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		82DCDFE922236060009D00E9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82DCE03722236A33009D00E9 /* ListOfPhotosPresenter.swift in Sources */,
+				82DCE03E22236F42009D00E9 /* BaseClient.swift in Sources */,
 				82DCDFF322236060009D00E9 /* ViewController.swift in Sources */,
+				82DCE03A22236A53009D00E9 /* ListOfPhotosInteractor.swift in Sources */,
 				82DCDFF122236060009D00E9 /* AppDelegate.swift in Sources */,
+				82DCE03422236A1C009D00E9 /* ListPhotosInterfaces.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,6 +483,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82DCE03B22236A53009D00E9 /* ListOfPhotosInteractor.swift in Sources */,
+				82DCE03522236A1C009D00E9 /* ListPhotosInterfaces.swift in Sources */,
+				82DCE03822236A33009D00E9 /* ListOfPhotosPresenter.swift in Sources */,
 				82DCE00622236063009D00E9 /* mindera_TestTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -486,6 +651,7 @@
 		};
 		82DCE01622236063009D00E9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B4F920D4205CC8B08A29736 /* Pods-mindera Test.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -507,6 +673,7 @@
 		};
 		82DCE01722236063009D00E9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 16F6955A4E9ED673EACB3FFB /* Pods-mindera Test.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -528,6 +695,7 @@
 		};
 		82DCE01922236063009D00E9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1996A3488D2C8010B6A0406D /* Pods-mindera TestTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -548,6 +716,7 @@
 		};
 		82DCE01A22236063009D00E9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D7BAD78598B39FA6A316C30 /* Pods-mindera TestTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -568,6 +737,7 @@
 		};
 		82DCE01C22236063009D00E9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BDC14699F87B3E37468FA095 /* Pods-mindera TestUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -587,6 +757,7 @@
 		};
 		82DCE01D22236063009D00E9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 70FA15DE115104878DCBCF62 /* Pods-mindera TestUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
