@@ -7,8 +7,8 @@
 //
 import Foundation
 import Alamofire
-class  BaseServiceAlamofire {
-    static let sharedInstance = BaseServiceAlamofire()
+class  BaseClient {
+    static let sharedInstance = BaseClient()
     var headers: [String : String]!
     
     func get(apiURL: String,  noConnection: () -> (), completion: @escaping (DefaultDataResponse) -> ()) {
@@ -16,6 +16,7 @@ class  BaseServiceAlamofire {
             noConnection()
             return
         }
+        
         Alamofire.request(apiURL, method: .get, encoding: JSONEncoding.default, headers: headers).response {(response) in
             completion(response)
         }

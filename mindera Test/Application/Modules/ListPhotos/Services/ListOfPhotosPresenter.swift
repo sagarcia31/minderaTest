@@ -23,7 +23,15 @@ class ListOfPhotosPresenter {
 
 
 extension ListOfPhotosPresenter: ListOfPhotosInteractorOutput {
+    func populatePhotoList() {
+        view?.populatePhotoList()
+    }
+    
 }
 
 extension ListOfPhotosPresenter : ListOfPhotosModule {
+    func getPhotoList() {
+        interactor.getPhotoList()
+    }
+    
 }

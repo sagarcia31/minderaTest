@@ -13,4 +13,23 @@ class ListOfPhotosInteractor {
 }
 
 extension ListOfPhotosInteractor: ListOfPhotosInteractorInput{
+    func getPhotoList() {
+        
+    }
+    
+    func getPhotos(completion: @escaping ([Any]) -> ()) {
+        let apiURL = Environment().getUrlFrom(endPoint: EndpointPlistKey.imageList)
+        
+        BaseClient.sharedInstance.get(apiURL: apiURL, noConnection: handleErrorConnection, completion:  { [unowned self] response in
+            self.handleGetRequest(response: response, completion: completion)
+        })
+    }
+    
+    
+    //MARK: ERROR
+    func handleErrorConnection() {
+        print("Error Connection")
+        return
+    }
+    
 }
