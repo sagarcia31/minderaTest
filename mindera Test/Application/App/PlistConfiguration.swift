@@ -24,11 +24,15 @@ public enum PlistKey {
 
 public enum EndpointPlistKey {
     case imageList
+    case getImage
     
     func value() -> String {
         switch self {
         case .imageList:
             return "LIST_IMAGES"
+            
+        case .getImage:
+            return "GET_IMAGES"
         }
     }
 }
@@ -57,7 +61,7 @@ public struct Environment {
         }
     }
     
-    public func getUrlFrom(endPoint: EndpointPlistKey,page:Int? = 0, parameters:[String]=[""]) -> String {
+    public func getUrlFrom(endPoint: EndpointPlistKey,page:Int = 0, parameters:[String]=[""]) -> String {
         guard let baseUrl = infoDict[PlistKey.ApiURL.value()] as? String else {
             return ""
         }
@@ -70,7 +74,7 @@ public struct Environment {
             return ""
         }
         
-        let url = baseUrl + endPoint + "&api_key=\(apiKey)&tags=kitten&page=\(String(describing: page))&format=json&nojsoncallback=1"
+        let url = baseUrl + String(format: endPoint, apiKey,page)
         
         guard parameters.count > 0 else {
             return  url

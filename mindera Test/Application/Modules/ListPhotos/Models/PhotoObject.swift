@@ -49,3 +49,21 @@ struct PhotosObject {
         }
     }
 }
+
+struct PhotoImage {
+    var label:String?
+    var width:String?
+    var height:String?
+    var source:String?
+    var url:String?
+    var media:String?
+    
+    init(json:JSON) {
+        self.label      = json["label"].stringValue
+        self.width      = json["width"].stringValue
+        self.height     = json["height"].stringValue
+        self.source     = json["source"].stringValue
+        self.url        = json["url"].stringValue
+        self.media      = json["media"].stringValue
+    }
+}
