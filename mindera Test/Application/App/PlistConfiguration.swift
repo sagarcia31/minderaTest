@@ -61,7 +61,7 @@ public struct Environment {
         }
     }
     
-    public func getUrlFrom(endPoint: EndpointPlistKey,page:Int = 0, parameters:[String]=[""]) -> String {
+    public func getUrlFrom(endPoint: EndpointPlistKey, parameters:[String]=[""]) -> String {
         guard let baseUrl = infoDict[PlistKey.ApiURL.value()] as? String else {
             return ""
         }
@@ -74,7 +74,7 @@ public struct Environment {
             return ""
         }
         
-        let url = baseUrl + String(format: endPoint, apiKey,page)
+        let url = baseUrl + String(format: endPoint, apiKey)
         
         guard parameters.count > 0 else {
             return  url

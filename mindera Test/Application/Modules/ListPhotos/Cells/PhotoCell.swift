@@ -7,17 +7,23 @@
 //
 
 import UIKit
+import SDWebImage
 
 class PhotoCell: UITableViewCell {
-    static let identifier = "PhotoCell"
+    @IBOutlet weak var imageViewLeft: UIImageView!
+    @IBOutlet weak var imageViewRight: UIImageView!
     
+    static let identifier = "PhotoCell"
     lazy var presenter: PhotoCellPresenter = {
         return PhotoCellPresenter(view: self)
     }()
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        presenter.requestImage(id: "121212")
+    }
+    
+    func populateImageCell(id:String){
+        presenter.requestImage(id: id)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -30,6 +36,7 @@ class PhotoCell: UITableViewCell {
 
 extension PhotoCell: PhotoCellInterfaces {
     func populateImageCell(photo: PhotoImage) {
-        print(photo.url)
+        imageViewLeft.sd_setImage(with: URL(string:photo.source!), placeholderImage: UIImage(named: "placeholder.png"))
+        imageViewRight.sd_setImage(with: URL(string:photo.source!), placeholderImage: UIImage(named: "placeholder.png"))
     }
 }

@@ -67,3 +67,16 @@ struct PhotoImage {
         self.media      = json["media"].stringValue
     }
 }
+
+struct PhotoImageSizeList {
+    var size:[JSON]
+    var listSize:[PhotoImage] = []
+    init(json:JSON){
+        self.size      = json["sizes"]["size"].arrayValue
+        
+        for item in size{
+            let objectSize = PhotoImage(json: item)
+            self.listSize.append(objectSize)
+        }
+    }
+}

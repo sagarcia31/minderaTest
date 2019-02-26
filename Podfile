@@ -6,6 +6,7 @@ target 'mindera Test' do
   use_frameworks!
   pod 'Alamofire'
   pod 'SwiftyJSON', '~> 4.0'
+  pod 'SDWebImage'
   # Pods for mindera Test
 
   target 'mindera TestTests' do

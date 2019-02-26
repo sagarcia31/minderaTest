@@ -66,7 +66,11 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource {
             
             return UITableViewCell()
         }
+        guard let id = photoItems?[indexPath.row].id else {
+            return UITableViewCell()
+        }
         
+        cell.populateImageCell(id: id)
         return cell
     }
 }

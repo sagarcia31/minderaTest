@@ -15,13 +15,13 @@ class PhotoCellInteractor {
 
 extension PhotoCellInteractor: PhotoCellInteractorInput {
     func requestImage(id: String) {
-        getPhotos(){(photoImage) in
+        getPhotos(id: id){(photoImage) in
             self.output?.populateImageCell(photo: photoImage)
         }
     }
     
-    func getPhotos(completion: @escaping (PhotoImage) -> ()) {
-        let apiURL = Environment().getUrlFrom(endPoint: EndpointPlistKey.getImage)
+    func getPhotos(id:String, completion: @escaping (PhotoImage) -> ()) {
+        let apiURL = Environment().getUrlFrom(endPoint: EndpointPlistKey.getImage, parameters: ["&photo_id=\(id)"])
         
         BaseClient.sharedInstance.get(apiURL: apiURL, noConnection: handleErrorConnection, completion:  { response in
             guard  let data =  response.data else {
@@ -33,9 +33,10 @@ extension PhotoCellInteractor: PhotoCellInteractorInput {
                 return
             }
             
-            let photoImage = PhotoImage(json: JSON(data))
+            let photoImage = PhotoImageSizeList(json: JSON(data))
             
-            return completion(photoImage)
+            let filteredImage = photoImage.listSize.filter() { $0.label == "Large Square" }
+            return completion(filteredImage[0])
             
         })
     }

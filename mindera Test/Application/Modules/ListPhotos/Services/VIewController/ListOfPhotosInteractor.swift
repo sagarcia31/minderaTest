@@ -21,7 +21,7 @@ extension ListOfPhotosInteractor: ListOfPhotosInteractorInput{
     }
     
     func getPhotos(completion: @escaping (PhotosObject) -> ()) {
-        let apiURL = Environment().getUrlFrom(endPoint: EndpointPlistKey.imageList)
+        let apiURL = Environment().getUrlFrom(endPoint: EndpointPlistKey.imageList, parameters: ["&page=0"])
         
         BaseClient.sharedInstance.get(apiURL: apiURL, noConnection: handleErrorConnection, completion:  { response in
             guard  let data =  response.data else {
