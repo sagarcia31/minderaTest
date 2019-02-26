@@ -23,10 +23,9 @@ class ListOfPhotosPresenter {
 
 
 extension ListOfPhotosPresenter: ListOfPhotosInteractorOutput {
-    func populatePhotoList() {
-        view?.populatePhotoList()
+    func populatePhotoList(photoObject: PhotosObject) {
+        view?.populatePhotoList(photoObject: photoObject)
     }
-    
 }
 
 extension ListOfPhotosPresenter : ListOfPhotosModule {

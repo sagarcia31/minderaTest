@@ -9,12 +9,12 @@
 import Foundation
 
 public enum PlistKey {
-    case ApiURl
+    case ApiURL
     case ApiKey
     
     func value() -> String {
         switch self {
-        case .ApiURl:
+        case .ApiURL:
             return "API_URL"
         case .ApiKey:
             return "API_KEY"
@@ -28,7 +28,7 @@ public enum EndpointPlistKey {
     func value() -> String {
         switch self {
         case .imageList:
-            return "list images"
+            return "LIST_IMAGES"
         }
     }
 }
@@ -58,7 +58,7 @@ public struct Environment {
     }
     
     public func getUrlFrom(endPoint: EndpointPlistKey,page:Int? = 0, parameters:[String]=[""]) -> String {
-        guard let baseUrl = infoDict[PlistKey.ApiURl.value()] as? String else {
+        guard let baseUrl = infoDict[PlistKey.ApiURL.value()] as? String else {
             return ""
         }
         

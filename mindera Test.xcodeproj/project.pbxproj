@@ -15,6 +15,8 @@
 		821E8D0622239DF4002E0BB2 /* BaseClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DCE03D22236F42009D00E9 /* BaseClient.swift */; };
 		821E8D0922239F4A002E0BB2 /* StatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821E8D0822239F4A002E0BB2 /* StatusCode.swift */; };
 		821E8D0A22239F4A002E0BB2 /* StatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821E8D0822239F4A002E0BB2 /* StatusCode.swift */; };
+		8255B48F2224CA15003E40FE /* PhotoObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8255B48E2224CA15003E40FE /* PhotoObject.swift */; };
+		8255B4902224CA15003E40FE /* PhotoObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8255B48E2224CA15003E40FE /* PhotoObject.swift */; };
 		82DCDFF122236060009D00E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DCDFF022236060009D00E9 /* AppDelegate.swift */; };
 		82DCDFF322236060009D00E9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DCDFF222236060009D00E9 /* ViewController.swift */; };
 		82DCDFF622236060009D00E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82DCDFF422236060009D00E9 /* Main.storyboard */; };
@@ -59,6 +61,7 @@
 		821E8D0122239034002E0BB2 /* PlistConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlistConfiguration.swift; sourceTree = "<group>"; };
 		821E8D0322239306002E0BB2 /* Endpoints.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Endpoints.plist; sourceTree = "<group>"; };
 		821E8D0822239F4A002E0BB2 /* StatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusCode.swift; sourceTree = "<group>"; };
+		8255B48E2224CA15003E40FE /* PhotoObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoObject.swift; sourceTree = "<group>"; };
 		82DCDFED22236060009D00E9 /* mindera Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mindera Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		82DCDFF022236060009D00E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82DCDFF222236060009D00E9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -125,6 +128,14 @@
 				821E8D0822239F4A002E0BB2 /* StatusCode.swift */,
 			);
 			path = Enums;
+			sourceTree = "<group>";
+		};
+		8255B48D2224C9AC003E40FE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8255B48E2224CA15003E40FE /* PhotoObject.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		82DCDFE422236060009D00E9 = {
@@ -210,6 +221,7 @@
 		82DCE021222364B8009D00E9 /* ListPhotos */ = {
 			isa = PBXGroup;
 			children = (
+				8255B48D2224C9AC003E40FE /* Models */,
 				82DCE024222364EB009D00E9 /* Views */,
 				82DCE023222364D8009D00E9 /* Controllers */,
 				82DCE022222364CB009D00E9 /* Services */,
@@ -450,12 +462,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-mindera Test/Pods-mindera Test-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -499,6 +513,7 @@
 				82DCE03A22236A53009D00E9 /* ListOfPhotosInteractor.swift in Sources */,
 				82DCDFF122236060009D00E9 /* AppDelegate.swift in Sources */,
 				82DCE03422236A1C009D00E9 /* ListPhotosInterfaces.swift in Sources */,
+				8255B48F2224CA15003E40FE /* PhotoObject.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -511,6 +526,7 @@
 				821E8D0622239DF4002E0BB2 /* BaseClient.swift in Sources */,
 				821E8D0522239D6F002E0BB2 /* PlistConfiguration.swift in Sources */,
 				82DCE03522236A1C009D00E9 /* ListPhotosInterfaces.swift in Sources */,
+				8255B4902224CA15003E40FE /* PhotoObject.swift in Sources */,
 				82DCE03822236A33009D00E9 /* ListOfPhotosPresenter.swift in Sources */,
 				82DCE00622236063009D00E9 /* mindera_TestTests.swift in Sources */,
 			);

@@ -9,7 +9,7 @@
 import UIKit
 
 protocol ListOfPhotosInterfaces: class {
-    func populatePhotoList()
+    func populatePhotoList(photoObject:PhotosObject)
 }
 
 protocol ListOfPhotosInteractorInput {
@@ -17,7 +17,7 @@ protocol ListOfPhotosInteractorInput {
 }
 
 protocol ListOfPhotosInteractorOutput: class {
-    func populatePhotoList()
+    func populatePhotoList(photoObject:PhotosObject)
 }
 
 protocol ListOfPhotosModule {

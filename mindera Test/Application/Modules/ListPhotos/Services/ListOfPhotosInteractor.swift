@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class ListOfPhotosInteractor {
     weak var output: ListOfPhotosInteractorOutput?
@@ -14,14 +15,29 @@ class ListOfPhotosInteractor {
 
 extension ListOfPhotosInteractor: ListOfPhotosInteractorInput{
     func getPhotoList() {
-        
+        getPhotos(){(photos) in
+            self.output?.populatePhotoList(photoObject: photos)
+        }
     }
     
-    func getPhotos(completion: @escaping ([Any]) -> ()) {
+    func getPhotos(completion: @escaping (PhotosObject) -> ()) {
         let apiURL = Environment().getUrlFrom(endPoint: EndpointPlistKey.imageList)
         
-        BaseClient.sharedInstance.get(apiURL: apiURL, noConnection: handleErrorConnection, completion:  { [unowned self] response in
-            self.handleGetRequest(response: response, completion: completion)
+        BaseClient.sharedInstance.get(apiURL: apiURL, noConnection: handleErrorConnection, completion:  { response in
+            guard  let data =  response.data else {
+                return
+            }
+            
+            guard  response.response?.statusCode == StatusCode.Success.rawValue  else{
+                self.handleGenericError()
+                return
+            }
+            
+            let photoList = PhotosObject(json: JSON(data))
+            
+            return completion(photoList)
+            
+            
         })
     }
     
@@ -29,7 +45,10 @@ extension ListOfPhotosInteractor: ListOfPhotosInteractorInput{
     //MARK: ERROR
     func handleErrorConnection() {
         print("Error Connection")
-        return
+    }
+    
+    func handleGenericError() {
+        print("Generic Error")
     }
     
 }

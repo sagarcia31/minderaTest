@@ -9,12 +9,21 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    lazy var presenter: ListOfPhotosPresenter = {
+        return ListOfPhotosPresenter(view: self)
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        presenter.getPhotoList()
     }
 
 
 }
 
+extension ViewController: ListOfPhotosInterfaces{
+    func populatePhotoList(photoObject: PhotosObject) {
+        print(photoObject)
+    }
+}
