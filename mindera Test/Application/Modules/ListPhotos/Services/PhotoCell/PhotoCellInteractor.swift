@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SwiftyJSON
 
 class PhotoCellInteractor {
     weak var output: PhotoCellInteractorOutput?

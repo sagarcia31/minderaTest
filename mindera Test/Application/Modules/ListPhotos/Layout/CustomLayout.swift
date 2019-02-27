@@ -34,7 +34,7 @@ class CustomLayout: UICollectionViewFlowLayout {
     
     func setupLayout() {
         minimumInteritemSpacing = 1
-        minimumLineSpacing = 1
+        minimumLineSpacing = 3
         scrollDirection = .vertical
     }
     

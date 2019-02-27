@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class PhotoGridCell: UICollectionViewCell {
     static let identifier = "PhotoGridCell"
@@ -22,6 +23,7 @@ class PhotoGridCell: UICollectionViewCell {
     }
     
     func populateImageCell(id:String){
+        imageView.image = UIImage(assetIdentifier: .placeholder)
         presenter.requestImage(id: id)
     }
 
@@ -29,6 +31,8 @@ class PhotoGridCell: UICollectionViewCell {
 
 extension PhotoGridCell: PhotoCellInterfaces {
     func populateImageCell(photo: PhotoImage) {
-//        imageView.sd_setImage(with: URL(string:photo.source!), placeholderImage: UIImage(named: "placeholder.png"))
+        guard let url = photo.source else {return}
+        let urlSource = URL(string: url)
+        imageView.af_setImage(withURL: urlSource!)
     }
 }

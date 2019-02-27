@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SwiftyJSON
 
 class ListOfPhotosInteractor {
     weak var output: ListOfPhotosInteractorOutput?

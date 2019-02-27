@@ -17,6 +17,11 @@ class ViewController: UIViewController {
         return ListOfPhotosPresenter(view: self)
     }()
     
+    // MARK:  STATUS BAR
+    override var preferredStatusBarStyle : UIStatusBarStyle {
+        return .lightContent
+    }
+    
     var photoItems:[Photo]?
     
     // MARK:  VIEW LIFECYCLE
@@ -59,12 +64,16 @@ extension ViewController:UICollectionViewDelegate, UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PhotoGridCell.identifier, for: indexPath) as? PhotoGridCell else {
             return UICollectionViewCell()
         }
+        cell.tag = indexPath.row
         
         guard let id = photoItems?[indexPath.row].id else {
             return UICollectionViewCell()
         }
         
-        cell.populateImageCell(id: id)
+        if(cell.tag == indexPath.row){
+            cell.populateImageCell(id: id)
+        }
+        
         return cell
     }
     

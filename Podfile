@@ -5,7 +5,7 @@ target 'mindera Test' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
   pod 'Alamofire'
-  pod 'SDWebImage'
+  pod 'AlamofireImage', '~> 3.5'
   # Pods for mindera Test
 
   target 'mindera TestTests' do
