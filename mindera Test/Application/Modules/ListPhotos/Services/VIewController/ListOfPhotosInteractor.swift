@@ -37,7 +37,6 @@ extension ListOfPhotosInteractor: ListOfPhotosInteractorInput{
             
             return completion(photoList)
             
-            
         })
     }
     

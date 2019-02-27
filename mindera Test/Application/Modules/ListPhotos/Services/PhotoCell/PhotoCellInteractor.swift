@@ -11,6 +11,7 @@ import SwiftyJSON
 
 class PhotoCellInteractor {
     weak var output: PhotoCellInteractorOutput?
+    static let attributeLabel = "Large Square"
 }
 
 extension PhotoCellInteractor: PhotoCellInteractorInput {
@@ -35,7 +36,8 @@ extension PhotoCellInteractor: PhotoCellInteractorInput {
             
             let photoImage = PhotoImageSizeList(json: JSON(data))
             
-            let filteredImage = photoImage.listSize.filter() { $0.label == "Large Square" }
+            let filteredImage = photoImage.listSize.filter() { $0.label ==  PhotoCellInteractor.attributeLabel}
+            
             return completion(filteredImage[0])
             
         })

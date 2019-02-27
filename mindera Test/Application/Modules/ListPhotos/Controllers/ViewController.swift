@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     // MARK:  OUTLETS
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var collectionView: UICollectionView!
     
     // MARK:  PRIVATE VARS
     lazy var presenter: ListOfPhotosPresenter = {
@@ -23,37 +23,31 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.getPhotoList()
-        setupTableView()
+        registerNibsCell()
     }
     
     // MARK:  PRIVATE METHODS
-    func setupTableView() {
-        registerNibsCell()
-        tableView.rowHeight = UITableView.automaticDimension
-        tableView.estimatedRowHeight = 180
-        tableView.reloadData()
-    }
-    
     private func registerNibsCell() {
-        let nibs = [PhotoCell.identifier]
+        let nibs = [PhotoGridCell.identifier]
         
         for cell in nibs {
             let nib = UINib.init(nibName: cell, bundle: nil)
-            self.tableView.register(nib, forCellReuseIdentifier: cell)
+            self.collectionView.register(nib, forCellWithReuseIdentifier: cell)
         }
     }
+
 }
 
 // MARK:  MVP EXTENSIONS
 extension ViewController: ListOfPhotosInterfaces{
     func populatePhotoList(photoObject: PhotosObject) {
         photoItems = photoObject.listPhotos
-        tableView.reloadData()
+        collectionView.reloadData()
     }
 }
 
-extension ViewController:UITableViewDelegate,UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+extension ViewController:UICollectionViewDelegate, UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         guard let count = photoItems?.count else {
             return 0
         }
@@ -61,16 +55,17 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource {
         return count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: PhotoCell.identifier, for: indexPath) as? PhotoCell else {
-            
-            return UITableViewCell()
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PhotoGridCell.identifier, for: indexPath) as? PhotoGridCell else {
+            return UICollectionViewCell()
         }
+        
         guard let id = photoItems?[indexPath.row].id else {
-            return UITableViewCell()
+            return UICollectionViewCell()
         }
         
         cell.populateImageCell(id: id)
         return cell
     }
+    
 }

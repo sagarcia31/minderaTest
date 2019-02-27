@@ -18,26 +18,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qdw-QC-gz2">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Jsn-Qn-fhF">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewLayout key="collectionViewLayout" id="DoF-kl-xpy" customClass="CustomLayout" customModule="mindera_Test" customModuleProvider="target"/>
+                                <cells/>
                                 <connections>
-                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Eye-Hq-Ovr"/>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="7xb-KF-LyI"/>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="5On-s1-3wy"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="LVB-5a-Etz"/>
                                 </connections>
-                            </tableView>
+                            </collectionView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qdw-QC-gz2" secondAttribute="bottom" id="ZCD-so-ajL"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qdw-QC-gz2" secondAttribute="trailing" id="dai-4s-A7l"/>
-                            <constraint firstItem="qdw-QC-gz2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="kw3-Q2-rdX"/>
-                            <constraint firstItem="qdw-QC-gz2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="pbW-pf-mdN"/>
+                            <constraint firstItem="Jsn-Qn-fhF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="OxX-xP-ilO"/>
+                            <constraint firstItem="Jsn-Qn-fhF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="TGM-1R-TYa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Jsn-Qn-fhF" secondAttribute="trailing" id="hoA-gG-Uky"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Jsn-Qn-fhF" secondAttribute="bottom" id="tXT-xc-R5v"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="tableView" destination="qdw-QC-gz2" id="tLT-0t-w5T"/>
+                        <outlet property="collectionView" destination="Jsn-Qn-fhF" id="u0e-9I-9gC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

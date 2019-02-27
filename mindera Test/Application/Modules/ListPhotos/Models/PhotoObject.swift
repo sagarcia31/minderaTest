@@ -38,6 +38,7 @@ struct PhotosObject {
     var page:Int
     var photo:[JSON]
     var listPhotos:[Photo] = []
+    
     init(json:JSON){
         self.total      = json["photos"]["total"].stringValue
         self.page       = json["photos"]["page"].intValue
