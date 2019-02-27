@@ -29,6 +29,6 @@ class PhotoGridCell: UICollectionViewCell {
 
 extension PhotoGridCell: PhotoCellInterfaces {
     func populateImageCell(photo: PhotoImage) {
-        imageView.sd_setImage(with: URL(string:photo.source!), placeholderImage: UIImage(named: "placeholder.png"))
+//        imageView.sd_setImage(with: URL(string:photo.source!), placeholderImage: UIImage(named: "placeholder.png"))
     }
 }

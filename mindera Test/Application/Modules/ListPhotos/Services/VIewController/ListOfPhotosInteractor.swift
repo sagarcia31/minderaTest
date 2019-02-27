@@ -33,9 +33,13 @@ extension ListOfPhotosInteractor: ListOfPhotosInteractorInput{
                 return
             }
             
-            let photoList = PhotosObject(json: JSON(data))
-            
-            return completion(photoList)
+            do {
+                let decoder = JSONDecoder()
+                let photoList = try decoder.decode(PhotoDictionary.self, from: data)
+                return completion(photoList.photos)
+            } catch {
+                self.handleGenericError()
+            }
             
         })
     }

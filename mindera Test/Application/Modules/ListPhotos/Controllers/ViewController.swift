@@ -41,7 +41,7 @@ class ViewController: UIViewController {
 // MARK:  MVP EXTENSIONS
 extension ViewController: ListOfPhotosInterfaces{
     func populatePhotoList(photoObject: PhotosObject) {
-        photoItems = photoObject.listPhotos
+        photoItems = photoObject.photo
         collectionView.reloadData()
     }
 }

@@ -9,75 +9,78 @@
 import UIKit
 import SwiftyJSON
 
-struct Photo {
+struct Photo:Decodable {
     var id:String?
     var owner:String?
     var secret:String?
     var server:String?
     var farm:Int
     var title:String
-    var isPublic:Bool
-    var isFriend:Bool
-    var isFamily:Bool
+    var isPublic:Int
+    var isFriend:Int
+    var isFamily:Int
     
-    init(json: JSON) {
-        self.id         = json["id"].stringValue
-        self.owner      = json["owner"].stringValue
-        self.secret     = json["secret"].stringValue
-        self.server     = json["server"].stringValue
-        self.farm       = json["farm"].intValue
-        self.title      = json["title"].stringValue
-        self.isPublic   = json["isPublic"].boolValue
-        self.isFriend   = json["isFriend"].boolValue
-        self.isFamily   = json["isFamily"].boolValue
+    enum CodingKeys: String, CodingKey {
+        case
+        id          = "id",
+        owner       = "owner",
+        server      = "server",
+        farm        = "farm",
+        title       = "title",
+        isPublic    = "ispublic",
+        isFriend    = "isfriend",
+        isFamily    = "isfamily"
     }
 }
 
-struct PhotosObject {
+struct PhotosObject:Decodable {
     var total:String?
     var page:Int
-    var photo:[JSON]
-    var listPhotos:[Photo] = []
+    var photo:[Photo] = []
     
-    init(json:JSON){
-        self.total      = json["photos"]["total"].stringValue
-        self.page       = json["photos"]["page"].intValue
-        self.photo      = json["photos"]["photo"].arrayValue
-        
-        for item in photo{
-            let objectPhoto = Photo(json: item)
-            self.listPhotos.append(objectPhoto)
-        }
+    enum CodingKeys: String, CodingKey {
+            case
+            total       = "total",
+            page        = "page",
+            photo       = "photo"
     }
 }
 
-struct PhotoImage {
+struct PhotoDictionary:Decodable {
+    var photos:PhotosObject
+}
+
+struct PhotoImage:Decodable {
     var label:String?
-    var width:String?
-    var height:String?
     var source:String?
     var url:String?
     var media:String?
     
-    init(json:JSON) {
-        self.label      = json["label"].stringValue
-        self.width      = json["width"].stringValue
-        self.height     = json["height"].stringValue
-        self.source     = json["source"].stringValue
-        self.url        = json["url"].stringValue
-        self.media      = json["media"].stringValue
+    enum CodingKeys: String, CodingKey {
+        case
+        label       = "label",
+        source      = "source",
+        url         = "url",
+        media       = "media"
+    }
+    
+}
+
+struct PhotoImageList:Decodable {
+    var canblog:Int
+    var canprint:Int
+    var candownload:Int
+    var listSize:[PhotoImage]
+    
+    enum CodingKeys: String, CodingKey {
+        case
+        listSize       = "size",
+        canblog        = "canblog",
+        canprint       = "canprint",
+        candownload    = "candownload"
     }
 }
 
-struct PhotoImageSizeList {
-    var size:[JSON]
-    var listSize:[PhotoImage] = []
-    init(json:JSON){
-        self.size      = json["sizes"]["size"].arrayValue
-        
-        for item in size{
-            let objectSize = PhotoImage(json: item)
-            self.listSize.append(objectSize)
-        }
-    }
+struct PhotoImageDictionary:Decodable {
+    var sizes:PhotoImageList
 }

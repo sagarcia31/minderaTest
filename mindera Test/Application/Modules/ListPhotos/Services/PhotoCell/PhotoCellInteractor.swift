@@ -34,12 +34,18 @@ extension PhotoCellInteractor: PhotoCellInteractorInput {
                 return
             }
             
-            let photoImage = PhotoImageSizeList(json: JSON(data))
-            
-            let filteredImage = photoImage.listSize.filter() { $0.label ==  PhotoCellInteractor.attributeLabel}
-            
-            return completion(filteredImage[0])
-            
+            do {
+                let decoder = JSONDecoder()
+                let photoImage = try decoder.decode(PhotoImageDictionary.self, from: data)
+                
+                let filteredImage = photoImage.sizes.listSize.filter() { $0.label ==  PhotoCellInteractor.attributeLabel}
+                
+                return completion(filteredImage[0])
+
+            } catch {
+                self.handleGenericError()
+            }
+
         })
     }
     
