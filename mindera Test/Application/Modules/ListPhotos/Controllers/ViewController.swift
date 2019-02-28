@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     
     // MARK:  PRIVATE VARS
-    lazy var presenter: ListOfPhotosPresenter = {
+    lazy var presenter: ListOfPhotosModule = {
         return ListOfPhotosPresenter(view: self)
     }()
     

@@ -11,16 +11,11 @@ import AlamofireImage
 
 class PhotoGridCell: UICollectionViewCell {
     static let identifier = "PhotoGridCell"
-    lazy var presenter: PhotoCellPresenter = {
+    lazy var presenter: PhotoCellModule = {
         return PhotoCellPresenter(view: self)
     }()
     
     @IBOutlet weak var imageView: UIImageView!
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
     
     func populateImageCell(id:String){
         imageView.image = UIImage(assetIdentifier: .placeholder)

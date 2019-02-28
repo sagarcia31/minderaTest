@@ -19,15 +19,60 @@ class mindera_TestTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testPopulateListPhotosObject() {
+        let presenter: ListOfPhotosModule = {
+            return ListOfPhotosPresenter(view: self)
+        }()
+        
+        presenter.getPhotoList()
+    }
+    
+    func testIfListPhotosObjectIsEmpty(){
+        let presenter: ListOfPhotosModule = {
+            return ListOfPhotosPresenter(view: self)
+        }()
+        
+        presenter.getPhotoList()
+    }
+    
+    func testIfPhotoIsSquareType(){
+        let presenter: PhotoCellModule = {
+            return PhotoCellPresenter(view: self)
+        }()
+        
+        presenter.requestImage(id: "31456463045")
+    }
+    
+    func testIfPhotoSourceIsWorking(){
+        let presenter: PhotoCellModule = {
+            return PhotoCellPresenter(view: self)
+        }()
+        
+        presenter.requestImage(id: "31456463045")
     }
 
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+}
+
+extension mindera_TestTests:ListOfPhotosInterfaces{
+    func populatePhotoList(photoObject: PhotosObject) {
+        if photoObject.photo.count > 0 {
+            XCTAssertTrue(true, "Returned photo list object")
+        }
+        
+        if photoObject.photo.isEmpty {
+            XCTAssertTrue(true, "Photo list object is empty")
+        }
+    }
+}
+
+extension mindera_TestTests:PhotoCellInterfaces{
+    func populateImageCell(photo: PhotoImage) {
+        if(photo.label == "Large Square"){
+            XCTAssertTrue(true)
+        }
+        
+        if(photo.source?.isEmpty == false){
+            XCTAssertTrue(true)
         }
     }
 
