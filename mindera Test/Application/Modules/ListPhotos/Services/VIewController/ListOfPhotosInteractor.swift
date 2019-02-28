@@ -13,14 +13,14 @@ class ListOfPhotosInteractor {
 }
 
 extension ListOfPhotosInteractor: ListOfPhotosInteractorInput{
-    func getPhotoList() {
-        getPhotos(){(photos) in
+    func getPhotoList(page: Int) {
+        getPhotos(page:page){(photos) in
             self.output?.populatePhotoList(photoObject: photos)
         }
     }
     
-    func getPhotos(completion: @escaping (PhotosObject) -> ()) {
-        let apiURL = Environment().getUrlFrom(endPoint: EndpointPlistKey.imageList, parameters: ["&page=0"])
+    func getPhotos(page:Int,completion: @escaping (PhotosObject) -> ()) {
+        let apiURL = Environment().getUrlFrom(endPoint: EndpointPlistKey.imageList, parameters: ["&page=\(page)"])
         
         BaseClient.sharedInstance.get(apiURL: apiURL, noConnection: handleErrorConnection, completion:  { response in
             guard  let data =  response.data else {

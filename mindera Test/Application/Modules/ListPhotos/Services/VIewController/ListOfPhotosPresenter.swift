@@ -35,9 +35,8 @@ extension ListOfPhotosPresenter: ListOfPhotosInteractorOutput {
 }
 
 extension ListOfPhotosPresenter : ListOfPhotosModule {
-    func getPhotoList() {
-        interactor.getPhotoList()
+    func getPhotoList(page: Int) {
+        interactor.getPhotoList(page: page)
         view?.showLoader()
     }
-    
 }

@@ -17,17 +17,19 @@ class ViewController: UIViewController {
         return ListOfPhotosPresenter(view: self)
     }()
     
+    var page:Int = 1
+    
     // MARK:  STATUS BAR
     override var preferredStatusBarStyle : UIStatusBarStyle {
         return .lightContent
     }
     
-    var photoItems:[Photo]?
+    var photoItems:[Photo] = []
     
     // MARK:  VIEW LIFECYCLE
     override func viewDidLoad() {
         super.viewDidLoad()
-        presenter.getPhotoList()
+        presenter.getPhotoList(page: page)
         registerNibsCell()
     }
     
@@ -60,7 +62,7 @@ extension ViewController: ListOfPhotosInterfaces{
     }
     
     func populatePhotoList(photoObject: PhotosObject) {
-        photoItems = photoObject.photo
+        photoItems += photoObject.photo
         collectionView.reloadData()
     }
 }
@@ -68,11 +70,7 @@ extension ViewController: ListOfPhotosInterfaces{
 // MARK:  COLLECTIONVIEW EXTENSIONS
 extension ViewController:UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        guard let count = photoItems?.count else {
-            return 0
-        }
-        
-        return count
+        return photoItems.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -81,15 +79,24 @@ extension ViewController:UICollectionViewDelegate, UICollectionViewDataSource {
         }
         cell.tag = indexPath.row
         
-        guard let id = photoItems?[indexPath.row].id else {
+        guard let id = photoItems[indexPath.row].id else {
             return UICollectionViewCell()
         }
         
-        if(cell.tag == indexPath.row){
-            cell.populateImageCell(id: id)
+        DispatchQueue.main.async {
+            if(cell.tag == indexPath.row){
+                cell.populateImageCell(id: id)
+            }
         }
         
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        if(indexPath.row == photoItems.count-1){
+            page += 1
+            presenter.getPhotoList(page: page)
+        }
     }
     
 }

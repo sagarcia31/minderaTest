@@ -16,7 +16,7 @@ protocol ListOfPhotosInterfaces: class {
 }
 
 protocol ListOfPhotosInteractorInput {
-    func getPhotoList()
+    func getPhotoList(page:Int)
 }
 
 protocol ListOfPhotosInteractorOutput: class {
@@ -25,5 +25,5 @@ protocol ListOfPhotosInteractorOutput: class {
 }
 
 protocol ListOfPhotosModule {
-    func getPhotoList()
+    func getPhotoList(page:Int)
 }
