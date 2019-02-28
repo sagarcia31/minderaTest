@@ -28,6 +28,8 @@
 		82963BA722264AB6008E12BF /* UIImageNameExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82963BA522264AB6008E12BF /* UIImageNameExtension.swift */; };
 		82963BA922264B3A008E12BF /* UIVIewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82963BA822264B3A008E12BF /* UIVIewExtensions.swift */; };
 		82963BAA22264B3A008E12BF /* UIVIewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82963BA822264B3A008E12BF /* UIVIewExtensions.swift */; };
+		82963BAC2227728D008E12BF /* UIVIewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82963BAB2227728D008E12BF /* UIVIewControllerExtension.swift */; };
+		82963BAD2227728D008E12BF /* UIVIewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82963BAB2227728D008E12BF /* UIVIewControllerExtension.swift */; };
 		82AA3612222620750035F9AD /* PhotoGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AA3610222620750035F9AD /* PhotoGridCell.swift */; };
 		82AA3614222620750035F9AD /* PhotoGridCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82AA3611222620750035F9AD /* PhotoGridCell.xib */; };
 		82AA3615222620750035F9AD /* PhotoGridCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82AA3611222620750035F9AD /* PhotoGridCell.xib */; };
@@ -83,6 +85,7 @@
 		8255B4A02224EF3E003E40FE /* PhotoCellInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCellInteractor.swift; sourceTree = "<group>"; };
 		82963BA522264AB6008E12BF /* UIImageNameExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageNameExtension.swift; sourceTree = "<group>"; };
 		82963BA822264B3A008E12BF /* UIVIewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIVIewExtensions.swift; sourceTree = "<group>"; };
+		82963BAB2227728D008E12BF /* UIVIewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIVIewControllerExtension.swift; sourceTree = "<group>"; };
 		82AA3610222620750035F9AD /* PhotoGridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGridCell.swift; sourceTree = "<group>"; };
 		82AA3611222620750035F9AD /* PhotoGridCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoGridCell.xib; sourceTree = "<group>"; };
 		82AA361622262B410035F9AD /* CustomLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLayout.swift; sourceTree = "<group>"; };
@@ -196,6 +199,7 @@
 			children = (
 				82963BA522264AB6008E12BF /* UIImageNameExtension.swift */,
 				82963BA822264B3A008E12BF /* UIVIewExtensions.swift */,
+				82963BAB2227728D008E12BF /* UIVIewControllerExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -589,6 +593,7 @@
 				82DCDFF322236060009D00E9 /* ViewController.swift in Sources */,
 				82DCE03A22236A53009D00E9 /* ListOfPhotosInteractor.swift in Sources */,
 				82963BA622264AB6008E12BF /* UIImageNameExtension.swift in Sources */,
+				82963BAC2227728D008E12BF /* UIVIewControllerExtension.swift in Sources */,
 				82963BA922264B3A008E12BF /* UIVIewExtensions.swift in Sources */,
 				82AA3612222620750035F9AD /* PhotoGridCell.swift in Sources */,
 				82DCDFF122236060009D00E9 /* AppDelegate.swift in Sources */,
@@ -606,6 +611,7 @@
 				821E8D0A22239F4A002E0BB2 /* StatusCode.swift in Sources */,
 				8255B4A22224EF3E003E40FE /* PhotoCellInteractor.swift in Sources */,
 				8255B49C2224EF1C003E40FE /* PhotoCellInterfaces.swift in Sources */,
+				82963BAD2227728D008E12BF /* UIVIewControllerExtension.swift in Sources */,
 				82DCE03B22236A53009D00E9 /* ListOfPhotosInteractor.swift in Sources */,
 				821E8D0622239DF4002E0BB2 /* BaseClient.swift in Sources */,
 				82963BA722264AB6008E12BF /* UIImageNameExtension.swift in Sources */,

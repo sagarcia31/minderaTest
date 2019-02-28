@@ -10,6 +10,7 @@ import UIKit
 
 protocol PhotoCellInterfaces: class {
     func populateImageCell(photo:PhotoImage)
+    func handleErrorRequest()
 }
 
 protocol PhotoCellInteractorInput {
@@ -18,6 +19,7 @@ protocol PhotoCellInteractorInput {
 
 protocol PhotoCellInteractorOutput: class {
      func populateImageCell(photo:PhotoImage)
+     func handleErrorRequest()
 }
 
 protocol PhotoCellModule {

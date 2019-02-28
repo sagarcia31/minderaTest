@@ -25,6 +25,10 @@ class PhotoGridCell: UICollectionViewCell {
 }
 
 extension PhotoGridCell: PhotoCellInterfaces {
+    func handleErrorRequest() {
+        imageView.image = UIImage(assetIdentifier: .placeholder)
+    }
+    
     func populateImageCell(photo: PhotoImage) {
         guard let url = photo.source else {return}
         let urlSource = URL(string: url)

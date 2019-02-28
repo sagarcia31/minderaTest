@@ -23,6 +23,10 @@ class PhotoCellPresenter {
 
 
 extension PhotoCellPresenter: PhotoCellInteractorOutput {
+    func handleErrorRequest() {
+        view?.handleErrorRequest()
+    }
+    
     func populateImageCell(photo: PhotoImage) {
         view?.populateImageCell(photo: photo)
     }

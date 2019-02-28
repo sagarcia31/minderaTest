@@ -51,10 +51,10 @@ extension PhotoCellInteractor: PhotoCellInteractorInput {
     
     //MARK: ERROR
     func handleErrorConnection() {
-        print("Error Connection")
+        output?.handleErrorRequest()
     }
     
     func handleGenericError() {
-        print("Generic Error")
+        output?.handleErrorRequest()
     }
 }

@@ -23,6 +23,10 @@ class ListOfPhotosPresenter {
 
 
 extension ListOfPhotosPresenter: ListOfPhotosInteractorOutput {
+    func showError(error: String) {
+        view?.showError(error: error)
+    }
+    
     func populatePhotoList(photoObject: PhotosObject) {
         view?.populatePhotoList(photoObject: photoObject)
     }

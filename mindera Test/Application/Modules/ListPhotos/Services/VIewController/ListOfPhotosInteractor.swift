@@ -46,11 +46,11 @@ extension ListOfPhotosInteractor: ListOfPhotosInteractorInput{
     
     //MARK: ERROR
     func handleErrorConnection() {
-        print("Error Connection")
+        output?.showError(error: "Error Connection")
     }
     
     func handleGenericError() {
-        print("Generic Error")
+        output?.showError(error: "Generic Error")
     }
     
 }

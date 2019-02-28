@@ -45,6 +45,10 @@ class ViewController: UIViewController {
 
 // MARK:  MVP EXTENSIONS
 extension ViewController: ListOfPhotosInterfaces{
+    func showError(error: String) {
+        alert(message: error)
+    }
+    
     func populatePhotoList(photoObject: PhotosObject) {
         photoItems = photoObject.photo
         collectionView.reloadData()
