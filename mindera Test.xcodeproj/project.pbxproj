@@ -30,6 +30,10 @@
 		82963BAA22264B3A008E12BF /* UIVIewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82963BA822264B3A008E12BF /* UIVIewExtensions.swift */; };
 		82963BAC2227728D008E12BF /* UIVIewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82963BAB2227728D008E12BF /* UIVIewControllerExtension.swift */; };
 		82963BAD2227728D008E12BF /* UIVIewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82963BAB2227728D008E12BF /* UIVIewControllerExtension.swift */; };
+		82963BB122277588008E12BF /* FullScreenLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82963BB022277588008E12BF /* FullScreenLoader.swift */; };
+		82963BB222277588008E12BF /* FullScreenLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82963BB022277588008E12BF /* FullScreenLoader.swift */; };
+		82963BB42227759D008E12BF /* FullScreenLoader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82963BB32227759D008E12BF /* FullScreenLoader.xib */; };
+		82963BB52227759D008E12BF /* FullScreenLoader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82963BB32227759D008E12BF /* FullScreenLoader.xib */; };
 		82AA3612222620750035F9AD /* PhotoGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AA3610222620750035F9AD /* PhotoGridCell.swift */; };
 		82AA3614222620750035F9AD /* PhotoGridCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82AA3611222620750035F9AD /* PhotoGridCell.xib */; };
 		82AA3615222620750035F9AD /* PhotoGridCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82AA3611222620750035F9AD /* PhotoGridCell.xib */; };
@@ -86,6 +90,8 @@
 		82963BA522264AB6008E12BF /* UIImageNameExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageNameExtension.swift; sourceTree = "<group>"; };
 		82963BA822264B3A008E12BF /* UIVIewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIVIewExtensions.swift; sourceTree = "<group>"; };
 		82963BAB2227728D008E12BF /* UIVIewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIVIewControllerExtension.swift; sourceTree = "<group>"; };
+		82963BB022277588008E12BF /* FullScreenLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FullScreenLoader.swift; path = "mindera Test/Application/Extensions/FullScreenLoader.swift"; sourceTree = SOURCE_ROOT; };
+		82963BB32227759D008E12BF /* FullScreenLoader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = FullScreenLoader.xib; path = "mindera Test/Application/Extensions/FullScreenLoader.xib"; sourceTree = SOURCE_ROOT; };
 		82AA3610222620750035F9AD /* PhotoGridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGridCell.swift; sourceTree = "<group>"; };
 		82AA3611222620750035F9AD /* PhotoGridCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoGridCell.xib; sourceTree = "<group>"; };
 		82AA361622262B410035F9AD /* CustomLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLayout.swift; sourceTree = "<group>"; };
@@ -204,6 +210,23 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		82963BAE22277514008E12BF /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				82963BAF2227751F008E12BF /* FullscreenLoader */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		82963BAF2227751F008E12BF /* FullscreenLoader */ = {
+			isa = PBXGroup;
+			children = (
+				82963BB022277588008E12BF /* FullScreenLoader.swift */,
+				82963BB32227759D008E12BF /* FullScreenLoader.xib */,
+			);
+			path = FullscreenLoader;
+			sourceTree = "<group>";
+		};
 		82AA361922262B480035F9AD /* Layout */ = {
 			isa = PBXGroup;
 			children = (
@@ -263,6 +286,7 @@
 		82DCE01E22236454009D00E9 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				82963BAE22277514008E12BF /* Components */,
 				82963BA422264A99008E12BF /* Extensions */,
 				821E8D0722239F33002E0BB2 /* Enums */,
 				82DCE03C22236F2D009D00E9 /* Base */,
@@ -465,6 +489,7 @@
 				82AA3614222620750035F9AD /* PhotoGridCell.xib in Resources */,
 				821E8D0422239306002E0BB2 /* Endpoints.plist in Resources */,
 				82DCDFF622236060009D00E9 /* Main.storyboard in Resources */,
+				82963BB42227759D008E12BF /* FullScreenLoader.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,6 +498,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				82AA3615222620750035F9AD /* PhotoGridCell.xib in Resources */,
+				82963BB52227759D008E12BF /* FullScreenLoader.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -600,6 +626,7 @@
 				8255B4A12224EF3E003E40FE /* PhotoCellInteractor.swift in Sources */,
 				82DCE03422236A1C009D00E9 /* ListPhotosInterfaces.swift in Sources */,
 				8255B48F2224CA15003E40FE /* PhotoObject.swift in Sources */,
+				82963BB122277588008E12BF /* FullScreenLoader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -608,6 +635,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				82963B9F22263D78008E12BF /* PhotoGridCell.swift in Sources */,
+				82963BB222277588008E12BF /* FullScreenLoader.swift in Sources */,
 				821E8D0A22239F4A002E0BB2 /* StatusCode.swift in Sources */,
 				8255B4A22224EF3E003E40FE /* PhotoCellInteractor.swift in Sources */,
 				8255B49C2224EF1C003E40FE /* PhotoCellInterfaces.swift in Sources */,

@@ -11,6 +11,8 @@ import UIKit
 protocol ListOfPhotosInterfaces: class {
     func populatePhotoList(photoObject:PhotosObject)
     func showError(error:String)
+    func showLoader()
+    func hideLoader()
 }
 
 protocol ListOfPhotosInteractorInput {

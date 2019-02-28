@@ -45,6 +45,16 @@ class ViewController: UIViewController {
 
 // MARK:  MVP EXTENSIONS
 extension ViewController: ListOfPhotosInterfaces{
+    func showLoader() {
+        DispatchQueue.main.async {
+            FullScreenLoader.sharedInstance.show()
+        }
+    }
+    
+    func hideLoader() {
+        FullScreenLoader.sharedInstance.hide()
+    }
+    
     func showError(error: String) {
         alert(message: error)
     }
@@ -55,6 +65,7 @@ extension ViewController: ListOfPhotosInterfaces{
     }
 }
 
+// MARK:  COLLECTIONVIEW EXTENSIONS
 extension ViewController:UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         guard let count = photoItems?.count else {

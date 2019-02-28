@@ -25,16 +25,19 @@ class ListOfPhotosPresenter {
 extension ListOfPhotosPresenter: ListOfPhotosInteractorOutput {
     func showError(error: String) {
         view?.showError(error: error)
+        view?.hideLoader()
     }
     
     func populatePhotoList(photoObject: PhotosObject) {
         view?.populatePhotoList(photoObject: photoObject)
+        view?.hideLoader()
     }
 }
 
 extension ListOfPhotosPresenter : ListOfPhotosModule {
     func getPhotoList() {
         interactor.getPhotoList()
+        view?.showLoader()
     }
     
 }
